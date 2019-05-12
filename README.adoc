@@ -1,0 +1,4 @@
+= Lazy Cache
+
+image:https://jitpack.io/v/Lipen/kotlin-lazycache.svg["Hits-of-Code", link="https://jitpack.io/#Lipen/kotlin-lazycache"]
+image:https://hitsofcode.com/github/Lipen/kotlin-lazycache["Hits-of-Code", link="https://hitsofcode.com/view/github/Lipen/kotlin-lazycache"]
