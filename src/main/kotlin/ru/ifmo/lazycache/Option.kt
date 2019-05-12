@@ -1,7 +1,7 @@
 package ru.ifmo.lazycache
 
 @Suppress("MemberVisibilityCanBePrivate")
-sealed class Option<out T> {
+internal sealed class Option<out T> {
     abstract fun isEmpty(): Boolean
 
     inline fun <U> map(f: (T) -> U): Option<U> =
@@ -18,12 +18,12 @@ sealed class Option<out T> {
     }
 }
 
-object None : Option<Nothing>() {
+internal object None : Option<Nothing>() {
     override fun isEmpty(): Boolean = true
     override fun toString(): String = "None"
 }
 
-data class Some<out T>(val value: T) : Option<T>() {
+internal data class Some<out T>(val value: T) : Option<T>() {
     override fun isEmpty(): Boolean = false
     override fun toString(): String = "Some($value)"
 }
