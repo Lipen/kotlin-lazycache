@@ -1,6 +1,7 @@
-package ru.ifmo.lazycache
+@file:Suppress("MemberVisibilityCanBePrivate")
 
-@Suppress("MemberVisibilityCanBePrivate")
+package com.github.lipen.lazycache
+
 internal sealed class Option<out T> {
     abstract fun isEmpty(): Boolean
 

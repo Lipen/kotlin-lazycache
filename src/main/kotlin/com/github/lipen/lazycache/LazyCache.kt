@@ -1,9 +1,10 @@
-package ru.ifmo.lazycache
+@file:Suppress("MemberVisibilityCanBePrivate")
+
+package com.github.lipen.lazycache
 
 import kotlin.properties.ReadOnlyProperty
 import kotlin.reflect.KProperty
 
-@Suppress("MemberVisibilityCanBePrivate")
 class LazyCache {
     private val properties: MutableList<LazyCachedValue<*>> = mutableListOf()
 

@@ -1,7 +1,7 @@
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = "ru.ifmo.lazycache"
+group = "com.github.lipen"
 
 plugins {
     kotlin("jvm") version Versions.kotlin
