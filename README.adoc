@@ -2,4 +2,3 @@
 
 image:https://jitpack.io/v/Lipen/kotlin-lazycache.svg["JitPack", link="https://jitpack.io/#Lipen/kotlin-lazycache"]
 image:https://hitsofcode.com/github/Lipen/kotlin-lazycache["Hits-of-Code", link="https://hitsofcode.com/view/github/Lipen/kotlin-lazycache"]
-image:https://api.codacy.com/project/badge/Grade/55433590845549cdb5ff0187cbe2db6f["Codacy code quality", link="https://www.codacy.com/app/Lipen/kotlin-lazycache"]

@@ -5,7 +5,6 @@ group = "com.github.lipen"
 
 plugins {
     kotlin("jvm") version Versions.kotlin
-    `build-scan`
     id("org.jlleitschuh.gradle.ktlint") version Versions.ktlint
     id("com.github.ben-manes.versions") version Versions.gradle_versions
     id("fr.brouillard.oss.gradle.jgitver") version Versions.jgitver
@@ -13,7 +12,7 @@ plugins {
 }
 
 repositories {
-    jcenter()
+    mavenCentral()
 }
 
 dependencies {
@@ -21,12 +20,6 @@ dependencies {
 
     testImplementation(Libs.junit_jupiter_api)
     testRuntimeOnly(Libs.junit_jupiter_engine)
-    testImplementation(Libs.kluent)
-}
-
-buildScan {
-    termsOfServiceUrl = "https://gradle.com/terms-of-service"
-    termsOfServiceAgree = "yes"
 }
 
 ktlint {
@@ -48,12 +41,18 @@ publishing {
     }
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
 
 tasks.withType<Test> {
-    @Suppress("UnstableApiUsage")
     useJUnitPlatform()
     testLogging.events(
         // TestLogEvent.PASSED,
@@ -64,7 +63,7 @@ tasks.withType<Test> {
 }
 
 tasks.wrapper {
-    gradleVersion = "5.4.1"
+    gradleVersion = "8.0.2"
     distributionType = Wrapper.DistributionType.ALL
 }
 
